@@ -1,10 +1,10 @@
 <div>
-    <!-- Hero Section Start -->
+    
 	<div class="hero">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6">
-					<!-- Hero Left Content Start -->
+					
 					<div class="hero-content">
 						<div class="section-title">
 							<h3 class="wow fadeInUp">Welcome to Glimy</h3>
@@ -23,27 +23,26 @@
 							<a href="#" class="btn-default dark-bg">Contact Now</a>
 						</div>
 					</div>
-					<!-- Hero Left Content End -->
+					
 				</div>
 
 				<div class="col-lg-6">
-					<!-- Hero Image Start -->
+					
 					<div class="hero-image wow fadeInUp" data-wow-delay="0.75s">
 						<figure class="hover-anime">
 							<img src="images/hero-img.jpg" alt="">
 						</figure>
 					</div>
-					<!-- Hero Image End -->
+					
 				</div>
 			</div>
 
-			<!-- Hero Scroll Down Arrow Start -->
+			
 			<div class="row">
 				<div class="col-md-12 scrollsp">
 					<a href="#aboutus" class="scroll-down"><span></span></a>
 				</div>
 			</div>
-			<!-- Hero Scroll Down Arrow End -->
 		</div>
 	</div>
 	<!-- Hero Section End -->
@@ -57,33 +56,34 @@
 					<div class="feature-ticker-box">
 						<div class="feature-ticker-content">
 							<ul>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Cut</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Dryer</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Style</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Coloring</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Shaving</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Organic Facial</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Eybrow Shaping</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Natural Color</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Eyelash Tinting</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Highter</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Cut</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Dryer</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Style</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Coloring</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Shaving</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Organic Facial</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Eybrow Shaping</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Natural Color</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Eyelash Tinting</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Highter</li>
 							</ul>
 						</div>
 
 						<div class="feature-ticker-content">
 							<ul>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Cut</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Dryer</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Style</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Coloring</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Shaving</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Organic Facial</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Eybrow Shaping</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Natural Color</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Eyelash Tinting</li>
-								<li><img src="images/ticker-icon.svg" alt=""> Hair Highter</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Cut</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Dryer</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Style</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Coloring</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Shaving</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Organic Facial</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Eybrow Shaping</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Natural Color</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Eyelash Tinting</li>
+								<li><img src="{ asset(images/ticker-icon.svg) }" alt=""> Hair Highter</li>
 							</ul>
 						</div>
+						
 					</div>
 					<!-- Features Ticker End -->
 				</div>

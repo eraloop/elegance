@@ -24,21 +24,31 @@
     <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
     
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
-    <link href="{{ asset('css/slicknav.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-    <link href="{{ asset('css/all.min.css') }}" rel="stylesheet" media="screen">
-    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="screen">
     
+    <link rel="stylesheet" href="{{ asset('webfonts/fa-brands-400.html') }}">
+    <link rel="stylesheet" href="{{ asset('webfonts/fa-regular-400.html') }}">
+    <link rel="stylesheet" href="{{ asset('webfonts/fa-solid-900.html') }}">
+
+
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/slicknav.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+    <link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/slicknav.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/swiper-bundle.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet" media="screen">
+    
+
     @yield('css')
     @livewireStyles
+
 </head>
 
 
@@ -55,7 +65,6 @@
 		<div id="ball"></div>
 	</div>
 	
-
     <div>
         {{ $slot ?? '' }}
     </div>
@@ -64,22 +73,23 @@
     @yield('javascript')
 
 
-	<script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/validator.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/SmoothScroll.js') }}"></script>
-    <script src="{{ asset('js/gsap.min.js') }}"></script>
-    <script src="{{ asset('js/magiccursor.js') }}"></script>
-    <script src="{{ asset('js/splitType.js') }}"></script>
-    <script src="{{ asset('js/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('js/wow.js') }}"></script>
-    <script src="{{ asset('js/function.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/validator.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/SmoothScroll.js') }}"></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/magiccursor.js') }}"></script>
+    <script src="{{ asset('assets/js/splitType.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/function.js') }}"></script>
 
+    
 </body>
 
 </html>
