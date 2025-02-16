@@ -1,0 +1,68 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_mycollection";
+    src: url("../fonts/flaticon_mycollection1fff.woff2?e418d7f6fc6d2929bc91514104cecd10") format("woff2"),
+url("../fonts/flaticon_mycollection1fff.woff?e418d7f6fc6d2929bc91514104cecd10") format("woff"),
+url("../fonts/flaticon_mycollection1fff.eot?e418d7f6fc6d2929bc91514104cecd10#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_mycollection1fff.ttf?e418d7f6fc6d2929bc91514104cecd10") format("truetype"),
+url("../fonts/flaticon_mycollection1fff.svg?e418d7f6fc6d2929bc91514104cecd10#flaticon_mycollection") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-seo:before {
+    content: "\f101";
+}
+.flaticon-web-browser:before {
+    content: "\f102";
+}
+.flaticon-coding:before {
+    content: "\f103";
+}
+.flaticon-responsive:before {
+    content: "\f104";
+}
+.flaticon-html:before {
+    content: "\f105";
+}
+.flaticon-edit-text:before {
+    content: "\f106";
+}
+.flaticon-form:before {
+    content: "\f107";
+}
+.flaticon-bootstrap:before {
+    content: "\f108";
+}
+.flaticon-game:before {
+    content: "\f109";
+}
+.flaticon-web-design:before {
+    content: "\f10a";
+}
+.flaticon-web-search-engine:before {
+    content: "\f10b";
+}
+.flaticon-contract:before {
+    content: "\f10c";
+}
+
