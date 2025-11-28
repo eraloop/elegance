@@ -13,11 +13,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            PermissionSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            CategorySeeder::class,
+            ServiceSeeder::class,
+            TestimonialSeeder::class,
+            FAQSeeder::class,
+            CompanyInfoSeeder::class,
+            HeroSeeder::class,
+            FeatureSeeder::class,
+            WhyChooseUsSeeder::class,
+            FunFactSeeder::class,
+            GalleryImageSeeder::class,
+            TeamSeeder::class,
+            BrandSeeder::class,
+            GoalSeeder::class,
+            AppointmentSeeder::class,
+            ContactSeeder::class,
         ]);
+
     }
 }

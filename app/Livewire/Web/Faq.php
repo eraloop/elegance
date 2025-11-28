@@ -8,6 +8,9 @@ class Faq extends Component
 {
     public function render()
     {
-        return view('livewire.web.faq');
+        $faqs = \App\Models\FAQ::where('status', 'visible')->orderBy('order')->get();
+        return view('livewire.web.faq', [
+            'faqs' => $faqs
+        ]);
     }
 }

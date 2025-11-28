@@ -35,4 +35,12 @@ return [
         ],
     ],
 
+    'facebook' => [
+        'app_id' => env('FACEBOOK_APP_ID'),
+        'app_secret' => env('FACEBOOK_APP_SECRET'),
+        'page_access_token' => env('FACEBOOK_PAGE_ACCESS_TOKEN'),
+        'page_id' => env('FACEBOOK_PAGE_ID'),
+        'instagram_account_id' => env('INSTAGRAM_ACCOUNT_ID'),
+    ],
+
 ];

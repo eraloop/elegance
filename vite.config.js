@@ -8,4 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: true,
+        hmr: {
+            host: 'https://e5b14782358d.ngrok-free.app',
+        },
+    },
 });

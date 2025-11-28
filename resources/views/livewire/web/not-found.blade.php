@@ -1,25 +1,25 @@
 <div>
-    	<!-- Page Header Section Start -->
+	<!-- Page Header Section Start -->
 	<div class="page-header">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-8 order-md-1 order-2">
 					<!-- Page Heading Start -->
 					<div class="page-header-box">
+						<div class="tiny-h3">
+							<h3 class="wow fadeInUp"> Elegance Beauty </h3>
+						</div>
 						<h1 class="text-anime">Page Not Found</h1>
-						<ol class="breadcrumb wow fadeInUp" data-wow-delay="0.25s">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">404 Error</li>
-						</ol>
+
 					</div>
 					<!-- Page Heading End -->
 				</div>
 
 				<div class="col-md-4 order-md-2 order-1">
 					<!-- Page Header Right Icon Start -->
-					<div class="page-header-icon-box wow fadeInUp" data-wow-delay="0.5s">	
+					<div class="page-header-icon-box wow fadeInUp" data-wow-delay="0.5s">
 						<div class="page-header-icon">
-							<img src="images/icon-notfound.svg" alt="">
+							<img src="{{ asset("assets/images/icon-notfound.svg")}}" alt="">
 						</div>
 					</div>
 					<!-- Page Header Right Icon End -->
@@ -37,11 +37,12 @@
 					<!-- Page Not Found Box Start -->
 					<div class="page-not-found-box wow fadeInUp" data-wow-delay="0.25s">
 						<div class="not-found-image">
-							<img src="images/image-404.svg" alt="">
+							<img src="{{ asset("assets/images/image-404.svg")}}" alt="">
 						</div>
 
 						<h3>Page Not Found!</h3>
-						<p>The page you are looking for might have been removed, had its name changed,<br> or is temporarily unavailable.</p>
+						<p>The page you are looking for might have been removed, had its name changed,<br> or is
+							temporarily unavailable.</p>
 
 						<a href="#" class="btn-default">Back To Home</a>
 					</div>
@@ -51,7 +52,7 @@
 		</div>
 	</div>
 	<!-- Page FAQs End -->
-	
+
 	<!-- Footer Start -->
 	<footer class="footer">
 		<!-- Footer Contact Information Section Start -->
@@ -62,11 +63,11 @@
 						<!-- Footer Contact Info Box Start -->
 						<div class="contact-info-item wow fadeInUp">
 							<div class="icon-box">
-								<img src="images/icon-location.svg" alt="">
+								<img src="{{ asset("assets/images/icon-location.svg")}}" alt="">
 							</div>
 
 							<h3>Our Location</h3>
-							<p>Glimy, 123 Main Street <br>Citytown, Stateville 12345<br> United States</p>
+							<p>{!! nl2br(e($company_info->address)) !!}</p>
 						</div>
 						<!-- Footer Contact Info Box End -->
 					</div>
@@ -75,11 +76,11 @@
 						<!-- Footer Contact Info Box Start -->
 						<div class="contact-info-item wow fadeInUp" data-wow-delay="0.25s">
 							<div class="icon-box">
-								<img src="images/icon-email-phone.svg" alt="">
+								<img src="{{ asset("assets/images/icon-email-phone.svg")}}" alt="">
 							</div>
 
 							<h3>Get in Touch</h3>
-							<p>Phone: +01 123 456 7890 <br>Email: info@domain.com<br> Fax: 789 456 1234</p>
+							<p>Phone: {{ $company_info->phone }} <br>Email: {{ $company_info->email }}</p>
 						</div>
 						<!-- Footer Contact Info Box End -->
 					</div>
@@ -88,11 +89,11 @@
 						<!-- Footer Contact Info Box Start -->
 						<div class="contact-info-item wow fadeInUp" data-wow-delay="0.5s">
 							<div class="icon-box">
-								<img src="images/icon-working-hours.svg" alt="">
+								<img src="{{ asset("assets/images/icon-working-hours.svg")}}" alt="">
 							</div>
 
 							<h3>Working Hours</h3>
-							<p>Mon-Fri: 10:00 AM - 9:00 PM <br>Saturday: 10:00 AM - 7:00 PM <br>Sunday: 10:00 PM - 7:00 PM</p>
+							<p>{!! nl2br(e($company_info->working_hours)) !!}</p>
 						</div>
 						<!-- Footer Contact Info Box End -->
 					</div>
@@ -108,7 +109,7 @@
 					<div class="col-lg-5">
 						<!-- Footer Logo Start -->
 						<div class="footer-logo">
-							<img src="images/footer-logo.svg" alt="">
+							<img src="{{ asset("assets/images/footer-logo.svg")}}" alt="">
 						</div>
 						<!-- Footer Logo End -->
 

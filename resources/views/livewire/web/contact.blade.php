@@ -1,29 +1,26 @@
 <div>
-    <!-- Page Header Section Start -->
+	<!-- Page Header Section Start -->
 	<div class="page-header">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-8 order-md-1 order-2">
-					<!-- Page Heading Start -->
 					<div class="page-header-box">
+						<div class="tiny-h3">
+							<h3 class="wow fadeInUp"> Elegance Beauty </h3>
+						</div>
 						<h1 class="text-anime">Contact Us</h1>
-						<ol class="breadcrumb wow fadeInUp" data-wow-delay="0.25s">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Contact</li>
-						</ol>
+
 					</div>
-					<!-- Page Heading End -->
 				</div>
 
 				<div class="col-md-4 order-md-2 order-1">
-					<!-- Page Header Right Icon Start -->
-					<div class="page-header-icon-box wow fadeInUp" data-wow-delay="0.5s">	
+					<div class="page-header-icon-box wow fadeInUp" data-wow-delay="0.5s">
 						<div class="page-header-icon">
-							<img src="images/icon-contact.svg" alt="">
+							<img src="{{ asset("assets/images/icon-contact.svg") }}" alt="">
 						</div>
 					</div>
-					<!-- Page Header Right Icon End -->
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -32,16 +29,16 @@
 	<!-- Contact Information Section Start -->
 	<div class="contact-information">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center align-items-center ">
 				<div class="col-lg-3 col-md-6">
 					<!-- Contact Box Start -->
 					<div class="contact-box wow fadeInUp">
 						<div class="icon-box">
-							<img src="images/icon-address.svg" alt="">
+							<img src="{{ asset("assets/images/icon-address.svg") }}" alt="">
 						</div>
 
 						<h3>Address</h3>
-						<p>Glimy, 123 Main Street<br> Citytown, United States</p>
+						<p>{!! nl2br(e($company_info->address)) !!}</p>
 					</div>
 					<!-- Contact Box End -->
 				</div>
@@ -50,24 +47,11 @@
 					<!-- Contact Box Start -->
 					<div class="contact-box wow fadeInUp" data-wow-delay="0.25s">
 						<div class="icon-box">
-							<img src="images/icon-phone.svg" alt="">
+							<img src="{{ asset("assets/images/icon-phone.svg")}}" alt="">
 						</div>
 
 						<h3>Phone</h3>
-						<p>(+01) 123 456 7890<br> (+02) 456 123 7890</p>
-					</div>
-					<!-- Contact Box End -->
-				</div>
-
-				<div class="col-lg-3 col-md-6">
-					<!-- Contact Box Start -->
-					<div class="contact-box wow fadeInUp" data-wow-delay="0.5s">
-						<div class="icon-box">
-							<img src="images/icon-fax.svg" alt="">
-						</div>
-
-						<h3>Fax</h3>
-						<p>+01 123 456 7890<br> +02 987 987 9870</p>
+						<p>{{ $company_info->phone }}</p>
 					</div>
 					<!-- Contact Box End -->
 				</div>
@@ -76,11 +60,11 @@
 					<!-- Contact Box Start -->
 					<div class="contact-box wow fadeInUp" data-wow-delay="0.75s">
 						<div class="icon-box">
-							<img src="images/icon-email.svg" alt="">
+							<img src="{{ asset("assets/images/icon-email.svg") }}" alt="">
 						</div>
 
 						<h3>Email</h3>
-						<p>info@domainname.com<br> sales@domainname.com</p>
+						<p>{{ $company_info->email }}</p>
 					</div>
 					<!-- Contact Box End -->
 				</div>
@@ -105,33 +89,42 @@
 
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
-					<!-- Contact Form start -->
-					<div class="contact-form wow fadeInUp" data-wow-delay="0.75s">
-						<form id="contactForm" action="#" method="POST" data-toggle="validator">
+					<div class="contact-form wow fadeInUp bg-primary-green " data-wow-delay="0.75s">
+						@if (session()->has('message'))
+							<div class="alert alert-success">
+								{{ session('message') }}
+							</div>
+						@endif
+						<form wire:submit.prevent="submit" id="contactForm" data-toggle="validator">
 							<div class="row">
 								<div class="form-group col-md-6 mb-4">
-									<input type="text" name="name" class="form-control" id="name" placeholder="Name" required >
-									<div class="help-block with-errors"></div>
+									<input type="text" wire:model="name" class="form-control" id="name"
+										placeholder="Name">
+									@error('name') <span class="text-danger">{{ $message }}</span> @enderror
 								</div>
 
 								<div class="form-group col-md-6 mb-4">
-									<input type="email" name ="email" class="form-control" id="email" placeholder="Email" required >
-									<div class="help-block with-errors"></div>
+									<input type="email" wire:model="email" class="form-control" id="email"
+										placeholder="Email">
+									@error('email') <span class="text-danger">{{ $message }}</span> @enderror
 								</div>
 
 								<div class="form-group col-md-6 mb-4">
-									<input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" required >
-									<div class="help-block with-errors"></div>
+									<input type="text" wire:model="phone" class="form-control" id="phone"
+										placeholder="Phone">
+									@error('phone') <span class="text-danger">{{ $message }}</span> @enderror
 								</div>
 
 								<div class="form-group col-md-6 mb-4">
-									<input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required >
-									<div class="help-block with-errors"></div>
+									<input type="text" wire:model="subject" class="form-control" id="subject"
+										placeholder="Subject">
+									@error('subject') <span class="text-danger">{{ $message }}</span> @enderror
 								</div>
 
 								<div class="form-group col-md-12 mb-4">
-									<textarea name="msg" class="form-control" id="msg" rows="4" placeholder="Write a Message" required></textarea>
-									<div class="help-block with-errors"></div>
+									<textarea wire:model="msg" class="form-control" id="msg" rows="4"
+										placeholder="Write a Message"></textarea>
+									@error('msg') <span class="text-danger">{{ $message }}</span> @enderror
 								</div>
 
 								<div class="col-md-12 text-center">
@@ -154,11 +147,16 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="google-map-iframe">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115295.63487487636!2d78.4483918264236!3d25.43864500078133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1703825451377!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115295.63487487636!2d78.4483918264236!3d25.43864500078133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1703825451377!5m2!1sen!2sin"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Google Map End -->
+
+	@include("components.web.floating-booking-btn")
 </div>

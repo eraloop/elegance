@@ -8,6 +8,9 @@ class NotFound extends Component
 {
     public function render()
     {
-        return view('livewire.web.not-found');
+        $company_info = \App\Models\CompanyInfo::first();
+        return view('livewire.web.not-found', [
+            'company_info' => $company_info
+        ]);
     }
 }
