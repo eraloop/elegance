@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             GoalSeeder::class,
             AppointmentSeeder::class,
             ContactSeeder::class,
+            ProductSeeder::class,
         ]);
 
     }

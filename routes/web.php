@@ -12,6 +12,12 @@ Route::get('/pricing', [\App\Livewire\Web\Pricing::class, '__invoke'])->name('we
 Route::get('/booking', [\App\Livewire\Web\Booking::class, '__invoke'])->name('web.booking');
 Route::get('/faq', [\App\Livewire\Web\Faq::class, '__invoke'])->name('web.faq');
 
+// Product Routes
+Route::get('/shop', \App\Livewire\Web\Products\ProductList::class)->name('web.products.index');
+Route::get('/shop/category/{category}', \App\Livewire\Web\Products\ProductList::class)->name('web.products.category');
+Route::get('/shop/product/{slug}', \App\Livewire\Web\Products\ProductDetail::class)->name('web.products.show');
+Route::get('/shop/checkout', \App\Livewire\Web\Products\Checkout::class)->name('web.products.checkout');
+
 
 Route::prefix('admin')->name('admin.')->group(function () {
 
@@ -39,6 +45,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::get('/gallery', \App\Livewire\Admin\Content\ManageGallery::class)->name('gallery');
             Route::get('/faqs', \App\Livewire\Admin\Content\ManageFaqs::class)->name('faqs');
             Route::get('/team', \App\Livewire\Admin\Content\ManageTeam::class)->name('team');
+        });
+
+        // Products Management
+        Route::group(['prefix' => 'products', 'as' => 'products.', 'middleware' => 'can:manage_products'], function () {
+            Route::get('/categories', \App\Livewire\Admin\Products\ManageCategories::class)->name('categories');
+            Route::get('/list', \App\Livewire\Admin\Products\ManageProducts::class)->name('list');
+            Route::get('/orders', \App\Livewire\Admin\Orders\ManageOrders::class)->name('orders');
         });
 
         // Social Media

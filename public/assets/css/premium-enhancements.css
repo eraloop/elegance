@@ -87,11 +87,31 @@
 }
 
 /* Premium Button Enhancements */
+/* Premium Button Enhancements */
 .btn-default {
-    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
     font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    min-height: 50px;
+}
+
+.btn-default:hover {
+    background: #0a5a42;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(8, 71, 52, 0.3);
 }
 
 .btn-default::after {
@@ -258,6 +278,15 @@ html {
 .testimonial-slide:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info-item {
+    text-align: center;
+    /* Removed white card background, padding, and shadow to match original footer design */
+}
+
+.contact-info-item:hover {
+    /* transform removed to match original design */
 }
 
 /* Pricing Card Enhancements */

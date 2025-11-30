@@ -40,6 +40,22 @@
             </a>
         @endcan
 
+        @can('manage_products')
+            <div class="menu-label">Shop</div>
+            <a href="{{ route('admin.products.list') }}"
+                class="menu-item {{ request()->routeIs('admin.products.list') ? 'active' : '' }}">
+                <i class="fas fa-box-open"></i> Products
+            </a>
+            <a href="{{ route('admin.products.categories') }}"
+                class="menu-item {{ request()->routeIs('admin.products.categories') ? 'active' : '' }}">
+                <i class="fas fa-tags"></i> Categories
+            </a>
+            <a href="{{ route('admin.products.orders') }}"
+                class="menu-item {{ request()->routeIs('admin.products.orders') ? 'active' : '' }}">
+                <i class="fas fa-shopping-bag"></i> Orders
+            </a>
+        @endcan
+
         @can('manage_content')
             <div class="menu-label">Content</div>
             <a href="{{ route('admin.content.company-info') }}"

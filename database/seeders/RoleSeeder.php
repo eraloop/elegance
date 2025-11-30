@@ -11,17 +11,17 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         // Create roles
-        $adminRole = \Spatie\Permission\Models\Role::create(['name' => 'admin']);
-        $userRole = \Spatie\Permission\Models\Role::create(['name' => 'user']);
+        $adminRole = \Spatie\Permission\Models\Role::firstOrCreate(['name' => 'admin']);
+        $userRole = \Spatie\Permission\Models\Role::firstOrCreate(['name' => 'user']);
 
         $this->command->info('Roles created successfully!');
         $this->command->info('- Admin role');
         $this->command->info('- User role');
 
         // Create roles for admin guard
-        $superAdmin = Role::create(['name' => 'super_admin', 'guard_name' => 'admin']);
-        $admin = Role::create(['name' => 'admin', 'guard_name' => 'admin']);
-        $staff = Role::create(['name' => 'staff', 'guard_name' => 'admin']);
+        $superAdmin = Role::firstOrCreate(['name' => 'super_admin', 'guard_name' => 'admin']);
+        $admin = Role::firstOrCreate(['name' => 'admin', 'guard_name' => 'admin']);
+        $staff = Role::firstOrCreate(['name' => 'staff', 'guard_name' => 'admin']);
 
         // Define permission groups
         $permissions = [
@@ -98,6 +98,17 @@ class RoleSeeder extends Seeder
                 'create_social_posts',
                 'delete_social_posts',
             ],
+            'products' => [
+                'manage_products',
+                'view_products',
+                'create_products',
+                'edit_products',
+                'delete_products',
+                'manage_categories',
+                'manage_orders',
+                'view_orders',
+                'update_order_status',
+            ],
         ];
 
         // Flatten all permissions into one list
@@ -128,6 +139,7 @@ class RoleSeeder extends Seeder
             $permissions['contacts'],
             $permissions['content'],
             $permissions['social_media'],
+            $permissions['products'],
         ));
 
         // Staff: More limited access

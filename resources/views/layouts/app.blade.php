@@ -83,13 +83,12 @@
 						<div class="collapse navbar-collapse main-menu">
 							<ul class="navbar-nav mr-auto" id="menu">
 								<li class="nav-item"><a class="nav-link" href="{{ route("web.index")}}">Home</a></li>
-								<li class="nav-item"><a class="nav-link" href="{{ route("web.about")}}">About us</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+										href="{{ route("web.products.index")}}">Shop</a></li>
 								<li class="nav-item"><a class="nav-link" href="{{ route("web.services")}}">Services</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="{{ route("web.pricing")}}">Pricing</a>
+								<li class="nav-item"><a class="nav-link" href="{{ route("web.about")}}">About us</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="{{ route("web.faq")}}">FAQ</a></li>
 								<li class="nav-item"><a class="nav-link" href="{{ route("web.contact")}}">Contact</a>
 								</li>
 								<li class="nav-item highlighted-menu"><a class="nav-link"
@@ -220,6 +219,51 @@
 			<!-- Main Footer End -->
 		</footer>
 	</div>
+
+	<!-- Floating Booking Button -->
+	<a href="{{ route('web.booking') }}" class="floating-booking-btn">
+		<i class="fas fa-calendar-check"></i> Book Now
+	</a>
+
+	<style>
+		.floating-booking-btn {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			background: linear-gradient(135deg, #084734 0%, #0a5a42 100%);
+			color: white;
+			padding: 15px 30px;
+			border-radius: 50px;
+			font-weight: 600;
+			text-decoration: none;
+			box-shadow: 0 5px 20px rgba(8, 71, 52, 0.4);
+			z-index: 9999;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 16px;
+		}
+
+		.floating-booking-btn:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(8, 71, 52, 0.5);
+			color: white;
+		}
+
+		.floating-booking-btn i {
+			font-size: 20px;
+		}
+
+		@media (max-width: 768px) {
+			.floating-booking-btn {
+				bottom: 20px;
+				right: 20px;
+				padding: 12px 25px;
+				font-size: 14px;
+			}
+		}
+	</style>
 
 	@livewireScripts
 	@yield('javascript')

@@ -41,7 +41,9 @@
 							<div class="service-list-entry">
 								<ul>
 									@foreach($categories as $category)
-										<li><a href="#">{{ $category->name }}</a></li>
+										@if($category && $category->name)
+											<li><a href="#">{{ $category->name }}</a></li>
+										@endif
 									@endforeach
 								</ul>
 							</div>
@@ -57,7 +59,7 @@
 							<div class="help-content">
 								<h3>Need Help? <br>Talk with Expert</h3>
 								<h5>Call Anytime</h5>
-								<p>{{ $company_info->phone }}</p>
+								<p>{{ $company_info->phone ?? 'Contact Us' }}</p>
 							</div>
 						</div>
 						<!-- Service Help Box End -->
@@ -143,6 +145,7 @@
 					</div>
 					<!-- FAQs End -->
 				</div>
+				
 			</div>
 		</div>
 	</div>
